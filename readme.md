@@ -1,5 +1,6 @@
-# Jekyll Mix
+# Designing a Better Chicago
 
+Forked from [jekyll-mix](https://github.com/fredericpfisterer/jekyll-mix)
 **A Jekyll Boilerplate With Laravel Mix**
 
 ## Features
