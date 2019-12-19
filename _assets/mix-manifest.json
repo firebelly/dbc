@@ -1,0 +1,10 @@
+{
+    "/scripts/main.js": "/scripts/main.js",
+    "/styles/main.css": "/styles/main.css",
+    "/scripts/main.js.map": "/scripts/main.js.map",
+    "/styles/main.css.map": "/styles/main.css.map",
+    "/scripts/manifest.js": "/scripts/manifest.js",
+    "/scripts/manifest.js.map": "/scripts/manifest.js.map",
+    "/scripts/vendor.js": "/scripts/vendor.js",
+    "/scripts/vendor.js.map": "/scripts/vendor.js.map"
+}
