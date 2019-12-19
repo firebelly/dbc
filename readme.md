@@ -10,7 +10,6 @@
 * Sourcemaps in Dev
 * Minification in Production
 * Versionning in Production
-* Include Media (http://include-media.com)
 
 ## Requirements
 
