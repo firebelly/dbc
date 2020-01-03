@@ -30,12 +30,11 @@
 .nav-close {
   @extend .button-reset;
   padding: 0;
-  right: 26px;
-  top: beat(2);
   cursor: pointer;
   position: absolute;
 
   svg {
+    display: block;
     fill: color('black');
   }
 
@@ -45,13 +44,17 @@
 }
 
 .nav-open {
+  top: 32px;
+  right: 25px;
   svg {
     width: 50px;
-    height: 15px;
+    height: 18px;
   }
 }
 
 .nav-close {
+  right: 32px;
+  top: beat(2);
   svg {
     width: 40px;
     height: 40px;
@@ -109,6 +112,16 @@
         width: 20px;
         height: 20px;
         vertical-align: middle;
+      }
+    }
+  }
+
+  @include media-md {
+    ul {
+      li {
+        a {
+          @include paragraph-style(80, 80);
+        }
       }
     }
   }

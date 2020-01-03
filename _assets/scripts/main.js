@@ -75,7 +75,6 @@ _initInviewElements();
 
 function _initCustomCursor() {
   if (!$('#cursor').length) {
-    $customCursor = $('<div id="cursor"></div>').appendTo($body);
     $body.css('cursor', 'none');
   }
 
@@ -83,6 +82,9 @@ function _initCustomCursor() {
 
   // Update the mouse position
   function onMouseMove(evt) {
+    if (!$('#cursor').length) {
+      $customCursor = $('<div id="cursor"></div>').appendTo($body);
+    }
     lastMousePosition.x = evt.clientX;
     lastMousePosition.y = evt.clientY;
     requestAnimationFrame(update);
