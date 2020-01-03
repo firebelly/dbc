@@ -38,11 +38,11 @@ body.home {
 
     @include media-md {
       > .container {
-        padding-bottom: 220px;
+        padding-bottom: $padding-xl + beat(6);
       }
 
       .site-logo {
-        margin-left: -#{$padding-md / 2};
+        margin-left: beat(-2);
       }
     }
   }

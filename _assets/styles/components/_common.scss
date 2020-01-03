@@ -6,15 +6,29 @@
   @include split-headline;
 
   &.offset-top-1 {
-    margin-bottom: -50px;
-    transform: translateY(-50px);
-    @include media-md {
-      margin-bottom: -130px;
-      transform: translateY(-130px);
+    margin-bottom: beat(-6);
+    transform: translateY(beat(-6));
+
+    span + span {
+      margin-top: beat(2);
     }
+
+    @include media-md {
+      margin-bottom: beat(-13.5);
+      transform: translateY(beat(-13.5));
+
+      span + span {
+        margin-top: $beat;
+      }
+    }
+
     @include media-lg {
-      margin-bottom: -140px;
-      transform: translateY(-140px);
+      margin-bottom: beat(-16.5);
+      transform: translateY(beat(-16.5));
+
+      span + span {
+        margin-top: beat(5);
+      }
     }
   }
 }
