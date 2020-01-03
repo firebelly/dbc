@@ -1,5 +1,255 @@
 // Home page
 
-.home {
-  // styles
+body.home {
+  @include selection(black,orange);
+
+  .page-banner {
+    background-color: color('orange');
+
+    > .container {
+      padding-bottom: $padding-lg;
+    }
+
+    .banner-background {
+      background-color: color('orange');
+      svg {
+        fill: color('gray');
+      }
+    }
+
+    .site-logo {
+      margin: 0;
+      z-index: 1;
+      width: 45vw;
+      position: relative;
+      .logo-container {
+        width: 100%;
+        position: relative;
+        padding-bottom: 52.718%;
+        svg {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+      }
+    }
+
+    @include media-md {
+      > .container {
+        padding-bottom: 220px;
+      }
+
+      .site-logo {
+        margin-left: -#{$padding-md / 2};
+      }
+    }
+  }
+
+  // Section Styles
+  // Intro Section
+  .intro-section {
+    padding-bottom: $padding-md;
+
+    .headline-two {
+      margin: $padding-md 0;
+    }
+
+    @include media-md {
+      padding-bottom: $padding-xl;
+
+      .headline-two {
+        margin: $padding-xl 0;
+      }
+    }
+  }
+
+  // Riverwalk Section
+  .riverwalk-section {
+    padding-top: beat(2);
+
+    .headline-one {
+      margin-bottom: $padding-md;
+    }
+
+    .section-cta {
+      margin-top: -59px;
+    }
+
+    @include media-md {
+      padding-top: beat(6);
+
+      .headline-one {
+        margin-bottom: beat(14);
+      }
+
+      .section-cta {
+        margin-top: -140px;
+      }
+    }
+  }
+
+  // Design Impact Section
+  .design-impact-section {
+    padding: 185px 0 0;
+
+    .headline-one {
+      text-align: right;
+      margin-bottom: $padding-md;
+    }
+
+    @include media-md {
+      padding-top: 400px;
+
+      .headline-one {
+        text-align: left;
+      }
+
+      .section-cta {
+        display: flex;
+        padding-right: 58px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  // Events Section
+  .events-section {
+    padding: beat(25) 0 beat(8);
+
+    .section-headline {
+      margin-bottom: 60px;
+    }
+
+    // No Events Message
+    .no-events {
+      position: relative;
+      padding: $padding-sm;
+      margin-bottom: $padding-md;
+      border-top: 3px solid color('black');
+      border-bottom: 3px solid color('black');
+      &::after {
+        @include h1;
+        left: 0;
+        top: 50%;
+        height: 40px;
+        content: '● ● ●';
+        position: absolute;
+        color: color('gray');
+        transform: translateY(-50%);
+      }
+
+      > * {
+        z-index: 1;
+        position: relative;
+      }
+
+      h5 {
+        @include h3;
+        margin: 0;
+        text-align: center;
+      }
+
+      @include media-md {
+        padding: $padding-md;
+        margin-bottom: beat(15);
+
+        &::after {
+          height: 115px;
+        }
+      }
+    }
+
+    .section-cta {
+      p {
+        text-align: right;
+        a {
+          color: color('orange');
+        }
+      }
+    }
+
+    .events-load-more {
+      margin: beat(6) auto 0;
+    }
+
+    @include media-md {
+      padding: beat(42) 0 $padding-lg;
+
+      .seciton-headline {
+        margin-bottom: $padding-md;
+      }
+    }
+  }
+
+  // Partners and Advisors Section
+  .partners-advisors-section {
+    padding: $padding-md 0;
+
+    > .container > div + div {
+      margin-top: $padding-xl;
+      @include media-md {
+        margin-top: $padding-xl * 1.5;
+      }
+    }
+
+    .section-headline {
+      @include h2;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      &:not(.partner-logos) {
+        li {
+          @include p2;
+
+          a {
+            &:hover,
+            &:focus {
+              color: color('orange');
+            }
+          }
+
+          > .-inner {
+            display: block;
+            padding-top: beat(2);
+            padding-bottom: $beat;
+            border-bottom: 2px solid color('dark-gray');
+
+            span {
+              display: block;
+              margin-top: $beat;
+              color: color('dark-gray');
+            }
+          }
+
+          &:last-of-type {
+            > .-inner {
+              border-bottom: none;
+            }
+
+            @include media-md {
+              > .-inner {
+                border-bottom: 2px solid color('dark-gray');
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-md {
+       padding: $padding-xl 0;
+    }
+  }
+
+  // Background-section
+  .background-section {
+    .logo-bottom {
+      fill: color('orange');
+    }
+  }
 }

@@ -2,8 +2,16 @@
 
 // Colors
 $colors: (
-  white: #ffffff,
-  black: #333333
+  'white'     : #ffffff,
+  'black'     : #1F1C1B,
+  'gray'      : #E0E0E0,
+  'dark-gray' : #959595,
+  'cream'     : #E2D1BA,
+  'orange'    : #F24F34,
+  'teal'      : #1C767C,
+  'moss'      : #A0A88C,
+  'forest'    : #757445,
+  'electric'  : #CAE44A
 );
 
 @function color($color-name) {
@@ -13,8 +21,8 @@ $colors: (
 // Breakpoints
 $breakpoint-sm: 520px;
 $breakpoint-md: 768px;
+$breakpoint-nav: 900px;
 $breakpoint-lg: 1000px;
-$breakpoint-nav: 1100px;
 $breakpoint-xl: 1200px;
 
 // Site Wrapper
@@ -22,5 +30,7 @@ $sitewrapper: 1400px;
 
 // Padding/spacing
 $beat: 10px;
-$padding-sm: 20px;
-$padding-md: 40px;
+$padding-sm: 30px;
+$padding-md: 80px;
+$padding-lg: 120px;
+$padding-xl: 220px;

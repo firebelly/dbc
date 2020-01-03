@@ -1,0 +1,66 @@
+// Forms
+
+form {
+  .input-group {
+    + .input-group {
+      margin-top: beat(2);
+    }
+
+    &.grid {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  .input-wrap {
+    position: relative;
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      width: 2px;
+      content: '';
+      height: 26px;
+      position: absolute;
+      background-color: color('black');
+    }
+  }
+
+  input {
+    @include p2;
+    width: 100%;
+    border: none;
+    display: block;
+    appearance: none;
+    padding-bottom: 15px;
+    padding-right: $padding-sm;
+    border-bottom: 2px solid color(black);
+    &:focus {
+      outline: none;
+    }
+    @include media-md {
+      padding-right: $padding-md;
+    }
+
+    &::-webkit-input-placeholder {
+       color: color('dark-gray');
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: color('dark-gray');
+    }
+    &:-ms-input-placeholder {
+       color: color('dark-gray');
+    }
+  }
+
+  label {
+    @include p2;
+    width: 100%;
+    display: block;
+    margin-bottom: $beat;
+  }
+
+  .form-actions {
+    margin-top: beat(5);
+  }
+}

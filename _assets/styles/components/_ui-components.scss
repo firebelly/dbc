@@ -1,0 +1,184 @@
+// UI Components
+
+// Regular Button
+@mixin button($typeStyle: 'p1') {
+  @if $typeStyle == 'p1' {
+    @include p1;
+  } @else if $typeStyle == 'p2' {
+    @include p2;
+  }
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  position: relative;
+  text-decoration: none;
+  &:not(.with-icon) {
+    &::after {
+      left: 0;
+      width: 100%;
+      content: '';
+      height: 2px;
+      bottom: 0px;
+      position: absolute;
+      border-bottom: 2px solid;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  // With Icon
+  &.with-icon {
+    span {
+      position: relative;
+      &::after {
+        left: 0;
+        width: 100%;
+        content: '';
+        height: 2px;
+        bottom: 0px;
+        position: absolute;
+        border-bottom: 2px solid;
+      }
+    }
+
+    svg {
+      width: 80px;
+      height: 26px;
+      vertical-align: middle;
+    }
+  }
+}
+.button {
+  @include button;
+}
+
+// Big Shape Buttons
+.circle-button {
+  @extend .button-reset;
+  @include p2;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  padding: 24px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 50%;
+  align-items: center;
+  color: color('black');
+  background: color('orange');
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: color('black');
+  }
+
+  @include media-md {
+    @include h3;
+    width: 400px;
+    padding: 60px;
+    height: 400px;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.square-button {
+  @include p2;
+  width: 198px;
+  height: 198px;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  align-items: center;
+  text-decoration: none;
+  color: color('black');
+  background-color: color('electric');
+  padding: beat(2) 26px beat(2) beat(2);
+
+  svg {
+    width: 36px;
+    height: 36px;
+    fill: color('black');
+  }
+
+  @include media-md {
+    @include h3;
+    width: 360px;
+    height: 360px;
+    padding: beat(4) 32px beat(4) 36px;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.diamond-button {
+  @include p2;
+  width: 156px;
+  height: 156px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: color('gray');
+  text-decoration: none;
+  transform: rotate(45deg);
+  background-color: color('teal');
+  transform-origin: center center;
+
+  > .-inner {
+    display: flex;
+    align-items: center;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+  }
+
+  svg {
+    width: 36px;
+    height: 36px;
+    fill: color('gray');
+  }
+
+  @include media-md {
+    @include h3;
+    width: 282px;
+    height: 282px;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+// Custom Cursor
+body.-cursor-active {
+  #cursor {
+    width: 60px;
+    height: 60px;
+  }
+}
+#cursor {
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  z-index: 1000;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: color('orange');
+  transform: translate3d(-50%, -50%, 0);
+  transition: width .125s ease, height .125s ease;
+}

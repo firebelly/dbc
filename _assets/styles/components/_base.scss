@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  @include font;
   font-size: 16px;
   color: color(black);
 	background: color(white);
@@ -22,7 +23,7 @@ img {
 	max-width: 100%;
 }
 
-.sitewrapper {
+.container {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -32,4 +33,13 @@ img {
   @include media-md {
     padding: 0 $padding-md;
   }
+}
+
+// Page Transitions
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
 }

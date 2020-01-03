@@ -1,0 +1,113 @@
+// Events Grid
+.events-grid-container {
+  position: relative;
+  &::before,
+  &::after {
+    top: -3px;
+    bottom: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: $padding-sm;
+    background: color('white');
+  }
+  &::before {
+    left: -3px;
+  }
+  &::after {
+    right: -3px;
+  }
+
+  @include media-md {
+    &::before,
+    &::after {
+      width: $padding-md + 3px;
+    }
+  }
+}
+
+.events-grid {
+  @include media-md {
+    margin-left: -$padding-md;
+    width: calc(100% + #{$padding-md * 2});
+  }
+
+  .grid-item {
+    width: 100%;
+    margin-top: -3px;
+    background: color('white');
+    padding: 20px 0 $padding-sm;
+    border-top: 3px solid color('black');
+
+    @include media-md {
+      margin-left: -3px;
+      width: calc(50% + 3px);
+      border: 3px solid color('black');
+      padding: 20px $padding-md $padding-md;
+
+      &:nth-of-type(2) {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  .event {
+    .event-meta {
+      p {
+        margin: 0;
+        @include h4;
+
+        + p {
+          margin-top: $beat;
+        }
+      }
+
+      .event-type {
+        svg {
+          width: 0.75em;
+          height: 0.75em;
+          margin-left: 0.25em;
+          display: inline-block;
+        }
+      }
+    }
+
+    .event-image {
+      height: 0;
+      background-size: cover;
+      padding-bottom: 57.1428%;
+      margin: beat(2) 0 beat(4);
+      background-position: center center;
+    }
+
+    .event-title {
+      margin: 0;
+      @include h3;
+    }
+
+    .event-body {
+      margin-top: beat(4);
+      padding-top: beat(2);
+      border-top: 3px solid color('black');
+    }
+
+    .event-location {
+      @include h4;
+    }
+
+    .event-description {
+      @include h3;
+    }
+
+    @include media-md {
+      .event-meta {
+        display: flex;
+        justify-content: space-between;
+
+        p + p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

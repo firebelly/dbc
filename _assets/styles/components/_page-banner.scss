@@ -1,0 +1,73 @@
+// Page Banner
+
+.page-banner {
+  z-index: 1;
+  overflow: hidden;
+  padding-top: 60px;
+  position: relative;
+
+  > .container {
+    z-index: 1;
+    position: relative;
+  }
+
+  .page-title {
+    @include h1;
+    margin: 0;
+    z-index: 1;
+    text-align: right;
+    position: relative;
+  }
+
+  .banner-background {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+
+    .y {
+      top: 0;
+      left: 50%;
+      z-index: 1;
+      width: 70.3819vw;
+      position: absolute;
+      padding-bottom: 58.4435%;
+      background-color: inherit;
+      transform: translateX(-50%);
+    }
+
+    .logo-top {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .y-stem {
+      left: 50%;
+      bottom: 0;
+      height: 100%;
+      width: 1.1111vw;
+      position: absolute;
+      transform: translateX(-52%);
+    }
+  }
+
+  .banner-content {
+    p {
+      @include p1;
+      margin: 0;
+
+      + p {
+        margin-top: $padding-sm;
+      }
+    }
+  }
+
+  @include media-md {
+    padding-top: 210px;
+  }
+}

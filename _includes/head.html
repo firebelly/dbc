@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="{{site.baseurl}}assets{{ site.defaults.css }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets{{ site.defaults.css }}">
+  <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}assets/images/favicon.png">
+  <!-- Inject SVGs Defs for SVG icon use -->
+  <script>
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", "{{ site.baseurl }}assets/svgs-defs.svg", true);
+    ajax.send();
+    ajax.onload = function(e) {
+      var div = document.createElement("div");
+      div.className += "svg-defs hidden";
+      div.innerHTML = ajax.responseText;
+      document.body.insertBefore(div, document.body.childNodes[0]);
+    }
+  </script>
 </head>
-<body>
+<body class="{% body_class %} {{ page.bodyClasses }}">
   <div id="breakpoint-indicator" class="hidden"></div>

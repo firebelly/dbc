@@ -1,5 +1,73 @@
 // Footer
 
 .site-footer {
-  
+  padding: beat(10) 0 beat(5);
+
+  > .container > .-top {
+    margin-bottom: beat(11);
+  }
+
+  @include media-md {
+    padding: $padding-lg 0 beat(2);
+
+    > .container > .-top {
+      margin-bottom: $padding-xl;
+    }
+  }
+
+  a {
+    color: color('orange');
+  }
+
+  .newsletter-signup {
+    h4, p {
+      @include p2;
+    }
+  }
+}
+
+// Newsletter Form
+form.newsletter {
+  .zipcode {
+    padding-right: 0;
+  }
+
+  button.submit {
+    color: color('orange');
+  }
+}
+
+// Footer Navigation
+.footer-nav {
+  ul {
+    @extend .semantic-list;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      &.-bottom {
+        margin-top: beat(4);
+        padding-top: beat(2);
+        border-top: 1px solid color('black');
+      }
+    }
+
+    a {
+      &:not(.privacy-policy) {
+        color: color('black');
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+      &.privacy-policy {
+        &:hover,
+        &:focus {
+          color: color('black');
+        }
+      }
+    }
+  }
 }

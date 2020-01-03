@@ -1,0 +1,147 @@
+// Common Styles
+
+// Split Headlines
+.split-headline {
+  @include h1;
+  @include split-headline;
+
+  &.offset-top-1 {
+    margin-bottom: -50px;
+    transform: translateY(-50px);
+    @include media-md {
+      margin-bottom: -130px;
+      transform: translateY(-130px);
+    }
+    @include media-lg {
+      margin-bottom: -140px;
+      transform: translateY(-140px);
+    }
+  }
+}
+
+// Common Section Styles
+.section {
+  position: relative;
+
+  > .container {
+    z-index: 1;
+  }
+
+  .section-line {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1.1111vw;
+    position: absolute;
+    fill: color('gray');
+    transform: translateX(-52%);
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  .section-headline {
+    @include h1;
+  }
+
+  .section-content,
+  .long-text {
+    p {
+      margin: 0;
+
+      + p {
+        margin-top: $padding-sm;
+      }
+    }
+  }
+
+  .section-content {
+    p {
+      @include p1;
+    }
+  }
+
+  .long-text {
+    p {
+      @include p2;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    padding-top: beat(3);
+    border-top: 3px solid;
+
+    p {
+      margin: 0;
+      @include h3;
+    }
+
+    @include media-md {
+      padding-top: beat(6);
+    }
+  }
+
+  .section-image {
+    position: relative;
+    margin: $padding-sm 0;
+
+    img {
+      display: block;
+    }
+
+    @include media-md {
+      margin: $padding-md 0;
+    }
+  }
+
+  .section-cta {
+    margin: 0;
+
+    &.overlap {
+      transform: translateY(50%);
+    }
+
+    > * {
+      margin: 0 auto;
+    }
+
+    @include media-md {
+      > * {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Background Section
+.background-section {
+  height: 0;
+  overflow: hidden;
+  background-size: cover;
+  padding-bottom: 111.1111%;
+  background-position: center center;
+
+  .y {
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    width: 70.3819vw;
+    position: absolute;
+    padding-bottom: 58.4435%;
+    background-color: inherit;
+    transform: translateX(-50%);
+  }
+
+  .logo-bottom {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  @include media-md {
+    padding-bottom: 56.25%;
+  }
+}

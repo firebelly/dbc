@@ -15,8 +15,15 @@
 
 // Components
 @import "components/base";
+@import "components/ui-components";
+@import "components/forms";
+@import "components/common";
 @import "components/header";
+@import "components/page-banner";
+@import "components/events-grid";
 @import "components/footer";
 
 // Pages
 @import "pages/home";
+@import "pages/riverwalk";
+@import "pages/design-impact-grants";

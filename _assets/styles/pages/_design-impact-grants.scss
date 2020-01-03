@@ -1,0 +1,45 @@
+// Design Impact Grants Page
+
+body.design-impact-grants {
+  @include selection(teal,cream);
+
+  // Active Nav Style
+  .site-nav .nav-design-impact-grants a {
+    color: color('white');
+  }
+
+  .site-logo svg {
+    fill: color('teal');
+  }
+
+  .page-banner {
+    background-color: color('cream');
+
+    > .container {
+      padding-bottom: 270px;
+    }
+
+    .page-title {
+      color: color('teal');
+    }
+
+    .banner-background {
+      background-color: color('cream');
+      svg {
+        fill: color('white');
+      }
+    }
+  }
+
+  // Intro Section
+  .intro-section {
+    padding: beat(2) 0 $padding-md;
+  }
+
+  // Background-section
+  .background-section {
+    .logo-bottom {
+      fill: color('teal');
+    }
+  }
+}

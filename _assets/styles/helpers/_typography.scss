@@ -9,6 +9,10 @@
 ///   font-weight: normal;
 ///   font-family: 'Custom Font Family';
 /// }
+@mixin font {
+  font-style: normal;
+  font-family: 'Telegraf';
+}
 
 /// Mixin to allow us to concisely define all aspects of a paragraph style (except for family.)
 /// @param {number} $size - Font size specified in pixels (without 'px')
@@ -41,3 +45,60 @@
 /// .h1 {
 ///   @include h1;
 /// }
+
+@mixin h1 {
+  @include font;
+  @include paragraph-style(52, 50, -0.02em);
+  @include media-md {
+    @include paragraph-style(140, 130, -0.03em);
+  }
+  @include media-lg {
+    @include paragraph-style(160, 140, -0.03em);
+  }
+}
+.h1 {
+  @include h1;
+}
+
+@mixin h2 {
+  @include font;
+  @include paragraph-style(38, 50);
+  @include media-md {
+    @include paragraph-style(100, 100, -0.02em);
+  }
+}
+.h2 {
+  @include h2;
+}
+
+@mixin h3 {
+  @include font;
+  @include paragraph-style(34, 40);
+}
+.h3 {
+  @include h3;
+}
+
+@mixin h4 {
+  @include font;
+  @include paragraph-style(18, 20, 0.04em, normal, uppercase);
+}
+.h4 {
+  @include h4;
+}
+
+@mixin p1 {
+  @include font;
+  @include paragraph-style(20, 25);
+  @include media-md {
+    @include paragraph-style(34, 40);
+  }
+}
+.p1 {
+  @include p1;
+}
+
+@mixin p2 {
+  @include font;
+  @include paragraph-style(20, 25);
+}

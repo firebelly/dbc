@@ -1,13 +1,19 @@
+import jQueryBridget from 'jquery-bridget';
 import Velocity from 'velocity-animate';
+import Masonry from 'masonry-layout';
 
+// Shared vars among modules
 import appState from '../util/appState';
 
 export default {
   init() {
+    // Set up libraries to be used with jQuery
+    jQueryBridget( 'masonry', Masonry, $ );
+
     var breakpointIndicatorString,
         breakpoint_xl,
-        breakpoint_nav,
         breakpoint_lg,
+        breakpoint_nav,
         breakpoint_md,
         breakpoint_sm,
         breakpoint_xs,
@@ -25,6 +31,7 @@ export default {
     // Cache some common DOM queries
     $document = $(document);
     $body = $('body');
+    $siteNav = $('#site-nav');
 
     // Set screen size vars
     _resize();
@@ -33,6 +40,8 @@ export default {
     transitionElements = [];
 
     // Init functions
+    _initSiteNav();
+    _initMasonry();
 
     // Esc handlers
     $(document).keyup(function(e) {
@@ -104,6 +113,22 @@ export default {
       });
     }
 
+    function _initSiteNav() {
+      $('.nav-open').on('click', function() {
+        $siteNav.addClass('-active');
+      });
+
+      $('.nav-close').on('click', function() {
+        $siteNav.removeClass('-active');
+      });
+    }
+
+    function _initMasonry() {
+      $('.masonry-grid').masonry({
+        itemSelector: '.grid-item'
+      });
+    }
+
     // Track ajax pages in Analytics
     function _trackPage() {
       if (typeof ga !== 'undefined') { ga('send', 'pageview', document.location.href); }
@@ -137,9 +162,9 @@ export default {
 
       // Determine current breakpoint
       breakpoint_xl = breakpointIndicatorString === 'xl';
-      breakpoint_nav = breakpointIndicatorString === 'nav' || breakpoint_xl;
-      breakpoint_lg = breakpointIndicatorString === 'lg' || breakpoint_nav;
-      breakpoint_md = breakpointIndicatorString === 'md' || breakpoint_lg;
+      breakpoint_nav = breakpointIndicatorString === 'lg' || breakpoint_xl;
+      breakpoint_lg = breakpointIndicatorString === 'nav' || breakpoint_lg;
+      breakpoint_md = breakpointIndicatorString === 'md' || breakpoint_nav;
       breakpoint_sm = breakpointIndicatorString === 'sm' || breakpoint_md;
       breakpoint_xs = breakpointIndicatorString === 'xs' || breakpoint_sm;
 

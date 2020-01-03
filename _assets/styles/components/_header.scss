@@ -1,5 +1,153 @@
 // Header
 
 .site-header {
-  
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+
+  .site-logo {
+    top: 43px;
+    margin: 0;
+    z-index: 2;
+    left: 20px;
+    position: absolute;
+
+    a {
+      display: inline-block;
+    }
+
+    svg {
+      width: 230px;
+      height: 167px;
+      vertical-align: top;
+    }
+  }
+}
+
+// Nav Toggle Buttons
+.nav-open,
+.nav-close {
+  @extend .button-reset;
+  padding: 0;
+  right: 26px;
+  top: beat(2);
+  cursor: pointer;
+  position: absolute;
+
+  svg {
+    fill: color('black');
+  }
+
+  @include media-nav {
+    display: none;
+  }
+}
+
+.nav-open {
+  svg {
+    width: 50px;
+    height: 15px;
+  }
+}
+
+.nav-close {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.site-nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  background-color: color('gray');
+  padding: $padding-xl $padding-sm $padding-sm;
+
+  &.-active {
+    display: block;
+  }
+
+  ul {
+    @extend .semantic-list;
+
+    li {
+      a {
+        @include paragraph-style(34, 40);
+        color: color('orange');
+        text-decoration: none;
+
+        svg {
+          width: 0.75em;
+          height: 0.75em;
+          fill: color('orange');
+        }
+      }
+
+      + li {
+        margin-top: beat(3);
+      }
+    }
+  }
+
+  .utility-nav {
+    margin-top: beat(4);
+    padding-top: beat(2);
+    border-top: 2px solid color('black');
+
+    .neocon-link {
+      text-decoration: none;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include media-nav {
+    z-index: 0;
+    height: auto;
+    display: block;
+    position: absolute;
+    padding: beat(5) 0 0 269px;
+    background-color: transparent;
+
+    ul {
+      li {
+        display: inline-block;
+        + li {
+          margin-left: beat(5);
+        }
+
+        a {
+          @include button(p2);
+          color: color('black');
+        }
+
+        svg {
+          display: none;
+        }
+
+        &.home-link {
+          display: none;
+        }
+      }
+    }
+
+    .utility-nav {
+      top: 25px;
+      margin: 0;
+      padding: 0;
+      right: 25px;
+      border: none;
+      position: absolute;
+    }
+  }
 }

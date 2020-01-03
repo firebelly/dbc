@@ -1,5 +1,26 @@
 // Mixins
 
+// Split Headline
+@mixin split-headline($color1: color('black'), $color2: color('orange')) {
+  span {
+    display: block;
+
+    svg {
+      width: 0.65em;
+      height: 0.65em;
+      margin-left: 0.2em;
+      display: inline-block;
+    }
+
+    &:first-of-type {
+      color: $color1;
+    }
+    &:last-of-type {
+      color: $color2;
+    }
+  }
+}
+
 // Ye olde clearfix
 @mixin clearfix {
   &:after {
@@ -13,6 +34,18 @@
 @mixin smooth {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// Fancy Selection Styles
+@mixin selection($text, $background) {
+  *::-moz-selection {
+    color: color('#{$text}');
+    background-color: color('#{$background}');
+  }
+  *::selection {
+    color: color('#{$text}');
+    background-color: color('#{$background}');
+  }
 }
 
 // Responsive mixins by Andy Richardson (@andimal): https://github.com/andimal/sass-responsive-mixin-madness

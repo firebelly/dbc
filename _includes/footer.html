@@ -1,3 +1,38 @@
 <footer id="site-footer" class="site-footer">
-  <p class="copyright">Copyright © {{ site.title }} {{ "now" | date: "%Y"}}</p>
+  <div class="container">
+
+    <div class="-top grid spaced-lg">
+      <div class="col-md-1-2">
+        <div class="newsletter-signup">
+          <h4>Subscribe to Designing a Better Chicago</h4>
+          <p>Stay up to date on upcoming events, submission deadlines, news and announcements.</p>
+          {% include newsletterform.html %}
+        </div>
+      </div>
+
+      <div class="col-md-1-2">
+        <p>Design Impact Grant Program</p>
+        <p><a href="mailto:grants@designchicago.org">grants@designchicago.org</a></p>
+
+        <p>General Inquires</p>
+        <p><a href="mailto:info@designingabetterchicago.org">info@designingabetterchicago.org</a></p>
+
+        <p>Sponsorships</p>
+        <p><a href="mailto:lmartin@themart.com">lmartin@themart.com</a></p>
+
+        <p>Media Updates</p>
+        <p><a href="mailto:https://www.neocon.com/press/press-contacts">https://www.neocon.com/press/press-contacts</a></p>
+      </div>
+    </div>
+
+    <div class="-bottom grid spaced-lg">
+      <div class="col-md-1-2">
+        <p class="copyright">Copyright © {{ site.title }} {{ "now" | date: "%Y"}}</p>
+      </div>
+      <div class="col-md-1-2">
+        {% include footernav.html %}
+      </div>
+    </div>
+
+  </div>
 </footer>

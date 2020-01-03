@@ -1,11 +1,40 @@
 // Colors
 
 @each $color, $value in $colors {
-  .color-#{$color} {
+  .color-#{$color},
+  .button.-#{$color} {
     fill: $value;
     color: $value;
   }
   .background-#{$color} {
     background-color: $value;
+  }
+
+  // Section Lines
+  .section .section-line.-#{$color} {
+    fill: $value;
+  }
+
+  // Split Headline Styles
+  .split-headline {
+    &[class*='#{$color}-'] {
+      span:first-of-type {
+        color: $value;
+        svg {
+          fill: $value;
+        }
+      }
+      @each $color, $value in $colors {
+        &[class$='-#{$color}'] {
+          span:last-of-type {
+            color: $value;
+
+            svg {
+              fill: $value;
+            }
+          }
+        }
+      }
+    }
   }
 }

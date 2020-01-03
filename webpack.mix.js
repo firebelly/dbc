@@ -4,7 +4,7 @@ const yaml = require('js-yaml')
 const childProcess = require('child_process')
 
 // Public path helper
-const publicPath = path => `_site/assets/${path}`;
+const publicPath = path => `assets/${path}`;
 // Source path helper
 const src = path => `_assets/${path}`;
 

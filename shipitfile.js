@@ -1,5 +1,8 @@
 module.exports = function (shipit) {
   shipit.initConfig({
+    default: {
+      branch: 'master',
+    },
     staging: {
       servers: 'firebelly@firebelly.webfactional.com'
     }
@@ -11,14 +14,14 @@ module.exports = function (shipit) {
 
   shipit.blTask('clean', function () {
     return shipit.remote(
-      'rm -rf /home/users/firebelly/webapps/dbc/public/*'
+      'rm -rf /home/users/firebelly/webapps/dbc/*'
     )
   })
 
   shipit.task('copy', function () {
     shipit.remoteCopy(
       './_site/',
-      '/home/users/firebelly/webapps/dbc/public'
+      '/home/users/firebelly/webapps/dbc'
     )
   })
 
