@@ -1,6 +1,6 @@
 # Designing a Better Chicago
 
-Forked from [jekyll-mix](https://github.com/fredericpfisterer/jekyll-mix)
+Forked from [jekyll-mix](https://github.com/fredericpfisterer/jekyll-mix) (and using fabric instead of shipit.js for deployment)
 **A Jekyll Boilerplate With Laravel Mix**
 
 ## Features
@@ -33,8 +33,4 @@ Forked from [jekyll-mix](https://github.com/fredericpfisterer/jekyll-mix)
 
 ## Deployment
 
-Edit shipitfile.js
-
-then :
-
-```shipit staging deploy```
+`fab debploy`

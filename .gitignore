@@ -6,3 +6,4 @@ yarn-error.log
 assets/*/
 _data/mix-manifest.json
 *.sublime-project
+*.pyc
