@@ -66,11 +66,13 @@
   height: 100vh;
   display: none;
   position: fixed;
-  background-color: color('gray');
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(color('gray'),0.96);
   padding: $padding-xl $padding-sm $padding-sm;
 
   &.-active {
-    display: block;
+    display: flex;
   }
 
   ul {
@@ -136,7 +138,7 @@
           display: none;
         }
 
-        &.home-link {
+        &.nav-home {
           display: none;
         }
       }

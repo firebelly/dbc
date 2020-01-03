@@ -30,7 +30,11 @@ body.privacy-policy {
 
   // Body Section
   .body-section {
-    padding: beat(2) 0 0;
+    padding: beat(2) 0 $padding-md;
+
+    @include media-md {
+      padding-bottom: $padding-xl;
+    }
   }
 
   // Background-section

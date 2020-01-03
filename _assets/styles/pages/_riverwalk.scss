@@ -5,7 +5,15 @@ body.riverwalk {
 
   // Active Nav Style
   .site-nav .nav-riverwalk a {
-    color: color('white');
+    color: color('black');
+    border-bottom: 2px solid;
+    svg {
+      fill: color('black');
+    }
+
+    @include media-nav {
+      color: color('white');
+    }
   }
   .footer-nav .nav-riverwalk a {
     color: color('orange');

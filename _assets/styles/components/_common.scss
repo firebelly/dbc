@@ -82,6 +82,12 @@
     }
   }
 
+  hr {
+    border: none;
+    margin: beat(4) 0;
+    border-top: 3px solid;
+  }
+
   blockquote {
     margin: 0;
     padding-top: beat(3);

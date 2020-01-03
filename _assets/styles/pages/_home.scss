@@ -4,6 +4,13 @@ body.home {
   @include selection(black,orange);
 
   // Active nav styles
+  .site-nav .nav-home a {
+    color: color('black');
+    border-bottom: 2px solid;
+    svg {
+      fill: color('black');
+    }
+  }
   .footer-nav .nav-home a {
     color: color('orange');
   }
@@ -42,6 +49,8 @@ body.home {
     }
 
     @include media-md {
+      padding-top: beat(21);
+
       > .container {
         padding-bottom: $padding-xl + beat(6);
       }

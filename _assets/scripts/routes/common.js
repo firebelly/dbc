@@ -46,6 +46,7 @@ export default {
     // Esc handlers
     $(document).keyup(function(e) {
       if (e.keyCode === 27) {
+        _hideNav();
       }
     });
 
@@ -114,12 +115,28 @@ export default {
     }
 
     function _initSiteNav() {
-      $('.nav-open').on('click', function() {
-        $siteNav.addClass('-active');
-      });
+      $('.nav-open').on('click', _showNav);
 
-      $('.nav-close').on('click', function() {
-        $siteNav.removeClass('-active');
+      $('.nav-close').on('click', _hideNav);
+    }
+
+    function _showNav() {
+      $siteNav.velocity(
+        { opacity: 1 }, {
+        display: "flex",
+        complete: function() {
+          $siteNav.addClass('-active');
+        }
+      });
+    }
+
+    function _hideNav() {
+      $siteNav.velocity(
+        { opacity: 0 }, {
+        display: "none",
+        complete: function() {
+          $siteNav.removeClass('-active');
+        }
       });
     }
 
@@ -167,6 +184,11 @@ export default {
       breakpoint_md = breakpointIndicatorString === 'md' || breakpoint_nav;
       breakpoint_sm = breakpointIndicatorString === 'sm' || breakpoint_md;
       breakpoint_xs = breakpointIndicatorString === 'xs' || breakpoint_sm;
+
+      // Reset inline styles for navigation for medium breakpoint
+      if (breakpoint_nav) {
+        $('.site-nav').attr('style', '');
+      }
 
       // Disable transitions when resizing
       _disableTransitions();
