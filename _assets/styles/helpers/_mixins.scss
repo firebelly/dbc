@@ -2,7 +2,7 @@
 
 // Split Headline
 @mixin split-headline($color1: color('black'), $color2: color('orange')) {
-  span {
+  > span {
     display: block;
 
     svg {

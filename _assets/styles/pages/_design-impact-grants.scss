@@ -27,7 +27,7 @@ body.design-impact-grants {
     background-color: color('cream');
 
     > .container {
-      padding-bottom: 270px;
+      padding-bottom: $padding-sm;
     }
 
     .page-title {
@@ -40,11 +40,41 @@ body.design-impact-grants {
         fill: color('white');
       }
     }
+
+    @include media-md {
+      > .container {
+        padding-bottom: $padding-md;
+      }
+    }
   }
 
   // Intro Section
   .intro-section {
     padding: beat(2) 0 0;
+
+    &.grantees-shown {
+      padding-bottom: $padding-md;
+
+      @include media-md {
+        padding-bottom: beat(39);
+      }
+    }
+  }
+
+  .grantees-section {
+    padding: $padding-md 0;
+
+    .headline-one {
+      margin-bottom: $padding-md;
+    }
+
+    @include media-md {
+      padding: beat(26) 0 $padding-xl;
+
+      .headline-one {
+        margin-bottom: beat(14);
+      }
+    }
   }
 
   // Background-section
