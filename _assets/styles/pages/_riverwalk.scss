@@ -69,8 +69,12 @@ body.riverwalk {
   .about-section {
     padding: beat(2) 0 $padding-sm;
 
+    .about-intro {
+      margin-bottom: $padding-md;
+    }
+
     .headline-one {
-      margin: $padding-md 0 $padding-sm;
+      margin: 0 0 $padding-sm;
     }
 
     .installation-text {
@@ -80,8 +84,12 @@ body.riverwalk {
     @include media-md {
       padding-bottom: $padding-md;
 
+      .about-intro {
+        margin-bottom: $padding-xl;
+      }
+
       .headline-one {
-        margin: $padding-xl 0 $padding-md;
+        margin: 0 0 $padding-md;
       }
 
       .installation-text {
