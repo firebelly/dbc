@@ -3,8 +3,8 @@
 .page-banner {
   z-index: 1;
   overflow: hidden;
-  padding-top: 60px;
   position: relative;
+  padding-top: beat(14);
 
   > .container {
     z-index: 1;
@@ -68,6 +68,6 @@
   }
 
   @include media-md {
-    padding-top: 210px;
+    padding-top: beat(30);
   }
 }

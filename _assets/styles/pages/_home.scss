@@ -3,6 +3,11 @@
 body.home {
   @include selection(black,orange);
 
+  // Active nav styles
+  .footer-nav .nav-home a {
+    color: color('orange');
+  }
+
   .page-banner {
     background-color: color('orange');
 

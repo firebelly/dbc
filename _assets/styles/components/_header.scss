@@ -123,6 +123,7 @@
       li {
         display: inline-block;
         + li {
+          margin-top: 0;
           margin-left: beat(5);
         }
 

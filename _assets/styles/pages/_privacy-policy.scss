@@ -1,0 +1,42 @@
+// Privacy Policy Page
+
+body.privacy-policy {
+  @include selection(black,gray);
+
+  // Active Nav Style
+  .footer-nav .nav-privacy-policy a {
+    color: color('white');
+    background-color: color('orange');
+  }
+
+  .site-logo svg {
+    fill: color('orange');
+  }
+
+  .page-banner {
+    background-color: color('gray');
+
+    .banner-background {
+      background-color: color('gray');
+      svg {
+        fill: color('white');
+      }
+    }
+
+    @include media-md {
+      padding: beat(30) 0 $padding-xl;
+    }
+  }
+
+  // Body Section
+  .body-section {
+    padding: beat(2) 0 0;
+  }
+
+  // Background-section
+  .background-section {
+    .logo-bottom {
+      fill: color('orange');
+    }
+  }
+}
