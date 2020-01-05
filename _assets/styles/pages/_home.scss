@@ -60,6 +60,12 @@ body.home {
         padding-bottom: $padding-xl + beat(6);
       }
 
+      .banner-background {
+        .y {
+          top: beat(21);
+        }
+      }
+
       .site-logo {
         width: 45vw;
         margin-left: beat(-2);
