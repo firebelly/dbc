@@ -87,16 +87,22 @@
 
     .event-body {
       margin-top: beat(4);
-      padding-top: beat(2);
+      padding-top: beat(4);
       border-top: 3px solid color('black');
     }
 
     .event-location {
       @include h4;
+      margin: 0 0 beat(3);
     }
 
     .event-description {
       @include h3;
+      margin: 0;
+    }
+
+    .event-cta {
+      margin: beat(3) 0 0;
     }
 
     @include media-md {
