@@ -4,6 +4,12 @@
 @mixin split-headline($color1: color('black'), $color2: color('orange')) {
   > span {
     display: block;
+    overflow: hidden;
+
+    > span {
+      display: block;
+      transition: transform .5s ease-out;
+    }
 
     svg {
       width: 0.65em;
@@ -13,9 +19,22 @@
 
     &:first-of-type {
       color: $color1;
+      > span {
+        transform: translateY(100%);
+      }
     }
     &:last-of-type {
       color: $color2;
+      > span {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  // In-view
+  &[data-in-view="true"] {
+    > span > span {
+      transform: translateY(0);
     }
   }
 }

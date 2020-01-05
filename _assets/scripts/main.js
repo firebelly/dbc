@@ -43,25 +43,25 @@ function _initInviewElements() {
     var inview = new Waypoint.Inview({
       element: $(this)[0],
       exited: function(direction) {
-        $(this).addClass('out-of-view');
+        $(this).attr('data-out-of-view', 'true');
       }
     });
   });
 
   function inView($elem) {
     var waypoint = $elem.waypoint(function(direction) {
-      $elem.addClass('in-view', direction === 'down');
+      $elem.attr('data-in-view', direction === 'down');
     },{
-      offset: '85%'
+      offset: '65%'
     });
   }
 
   $('.animate-in-series').each(function() {
     var $container = $(this);
     $container.waypoint(function(direction) {
-      $container.addClass('in-view', direction === 'down');
+      $container.attr('data-in-view', direction === 'down');
     },{
-      offset: '85%'
+      offset: '65%'
     });
 
     // establish transition delays

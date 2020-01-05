@@ -18,7 +18,7 @@
   // Split Headline Styles
   .split-headline {
     &[class*='#{$color}-'] {
-      span:first-of-type {
+      > span:first-of-type {
         color: $value;
         svg {
           fill: $value;
@@ -26,7 +26,7 @@
       }
       @each $color, $value in $colors {
         &[class$='-#{$color}'] {
-          span:last-of-type {
+          > span:last-of-type {
             color: $value;
 
             svg {
