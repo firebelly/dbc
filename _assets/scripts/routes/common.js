@@ -42,6 +42,7 @@ export default {
     // Init functions
     _initSiteNav();
     _initMasonry();
+    _initLoadMore();
 
     // Esc handlers
     $(document).keyup(function(e) {
@@ -143,6 +144,34 @@ export default {
     function _initMasonry() {
       $('.masonry-grid').masonry({
         itemSelector: '.grid-item'
+      });
+    }
+
+    function _initLoadMore() {
+      var $loadMoreSections = $('.load-more-container').parents('.section');
+
+      $loadMoreSections.each(function() {
+        var $container = $(this).find('.load-more-container');
+        var $grid = $container.masonry({
+          itemSelector: '.grid-item'
+        });
+
+        var $queue = $(this).find('.load-more-queue');
+
+        if ($queue.find('article').length) {
+          $(this).find('.section-cta').append('<button class="load-more circle-button cursor-hover">Load More Events <svg class="icon-plus" aria-hidden="true" role="presentation"><use xlink:href="#icon-plus"/></svg></button>');
+          var $button = $(this).find('.load-more');
+
+          $button.on('click', function() {
+            var newPosts = $queue.find('article').slice(0,4);
+            newPosts.appendTo($container);
+            $grid.masonry('appended', newPosts);
+
+            if (!$queue.find('article').length) {
+              $button.remove();
+            }
+          });
+        }
       });
     }
 
