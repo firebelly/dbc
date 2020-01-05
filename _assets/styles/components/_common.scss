@@ -45,10 +45,20 @@
     top: 0;
     left: 50%;
     height: 100%;
-    width: 1.1111vw;
+    width: 70.3819vw;
     position: absolute;
-    fill: color('gray');
-    transform: translateX(-52%);
+    pointer-events: none;
+    max-width: $sitewrapper;
+    transform: translateX(-50%);
+
+    svg {
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 1.5786729%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
   }
 
   h1, h2, h3 {
@@ -143,15 +153,25 @@
   padding-bottom: 111.1111%;
   background-position: center center;
 
-  .y {
+  .y-container {
     top: 0;
     left: 50%;
+    bottom: 0;
     z-index: 1;
     width: 70.3819vw;
     position: absolute;
+    max-width: $sitewrapper;
+    transform: translateX(-50%);
+  }
+
+  .y {
+    top: 0;
+    left: 50%;
+    width: 100%;
+    position: absolute;
     padding-bottom: 58.4435%;
     background-color: inherit;
-    transform: translateX(-50%);
+    transform: translateX(-49.95%);
   }
 
   .logo-bottom {

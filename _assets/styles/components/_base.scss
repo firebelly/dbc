@@ -9,6 +9,7 @@ html {
 
 body {
   @include font;
+  @include smooth;
   font-size: 16px;
   color: color(black);
 	background: color(white);

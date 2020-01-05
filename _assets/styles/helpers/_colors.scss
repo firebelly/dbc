@@ -10,8 +10,8 @@
     background-color: $value;
   }
 
-  // Section Lines
-  .section .section-line.-#{$color} {
+  // SVG Fills
+  svg.fill-#{$color} {
     fill: $value;
   }
 

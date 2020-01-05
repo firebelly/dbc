@@ -16,6 +16,7 @@ body.home {
   }
 
   .page-banner {
+    padding-top: beat(14);
     background-color: color('orange');
 
     > .container {
@@ -24,16 +25,20 @@ body.home {
 
     .banner-background {
       background-color: color('orange');
+      .y {
+        top: beat(6);
+      }
+
       svg {
         fill: color('gray');
       }
     }
 
     .site-logo {
-      margin: 0;
       z-index: 1;
-      width: 45vw;
+      width: 100%;
       position: relative;
+      margin: 0 0 0 -#{$padding-sm / 2};
       .logo-container {
         width: 100%;
         position: relative;
@@ -49,13 +54,14 @@ body.home {
     }
 
     @include media-md {
-      padding-top: beat(21);
+      padding-top: beat(16);
 
       > .container {
         padding-bottom: $padding-xl + beat(6);
       }
 
       .site-logo {
+        width: 45vw;
         margin-left: beat(-2);
       }
     }

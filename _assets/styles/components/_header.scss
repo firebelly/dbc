@@ -6,11 +6,15 @@
   width: 100%;
   position: absolute;
 
+  > .container {
+    padding: 0;
+  }
+
   .site-logo {
-    top: 43px;
     margin: 0;
     z-index: 2;
     left: 20px;
+    top: beat(2);
     position: absolute;
 
     a {
@@ -21,6 +25,12 @@
       width: 230px;
       height: 167px;
       vertical-align: top;
+    }
+  }
+
+  @include media-md {
+    .site-logo {
+      top: 43px;
     }
   }
 }

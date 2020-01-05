@@ -4,7 +4,7 @@
   z-index: 1;
   overflow: hidden;
   position: relative;
-  padding-top: beat(14);
+  padding-top: beat(23);
 
   > .container {
     z-index: 1;
@@ -21,18 +21,20 @@
 
   .banner-background {
     top: 0;
-    left: 0;
+    left: 50%;
     bottom: 0;
     z-index: 0;
-    width: 100%;
+    width: 70.3819vw;
     position: absolute;
     pointer-events: none;
+    max-width: $sitewrapper;
+    transform: translateX(-50%);
 
     .y {
-      top: 0;
       left: 50%;
       z-index: 1;
-      width: 70.3819vw;
+      width: 100%;
+      top: beat(21);
       position: absolute;
       padding-bottom: 58.4435%;
       background-color: inherit;
@@ -40,7 +42,6 @@
     }
 
     .logo-top {
-      top: 0;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -50,7 +51,8 @@
       left: 50%;
       bottom: 0;
       height: 100%;
-      width: 1.1111vw;
+      top: beat(21);
+      width: 1.5786729%;
       position: absolute;
       transform: translateX(-52%);
     }

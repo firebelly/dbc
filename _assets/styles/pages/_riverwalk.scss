@@ -27,7 +27,7 @@ body.riverwalk {
     background-color: color('forest');
 
     > .container {
-      padding-bottom: 270px;
+      padding-bottom: beat(13);
     }
 
     .page-title {
@@ -39,6 +39,10 @@ body.riverwalk {
       svg {
         fill: color('moss');
       }
+    }
+
+    @include media-md {
+      padding-bottom: beat(27);
     }
   }
 
