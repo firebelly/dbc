@@ -74,10 +74,7 @@ function _initInviewElements() {
 _initInviewElements();
 
 function _initCustomCursor() {
-  if (!$('#cursor').length) {
-    $body.css('cursor', 'none');
-  }
-
+  $body.css('cursor', 'none');
   var lastMousePosition = { x: 0, y: 0 };
 
   // Update the mouse position
@@ -91,6 +88,9 @@ function _initCustomCursor() {
   }
 
   function update() {
+    if (!$('#cursor').length) {
+      return;
+    }
     // Get the element we're hovered on
     var hoveredEl = document.elementFromPoint(lastMousePosition.x, lastMousePosition.y);
 
@@ -105,7 +105,6 @@ function _initCustomCursor() {
     $customCursor.css({
       'top': lastMousePosition.y + 'px',
       'left': lastMousePosition.x + 'px'
-      // 'transform': 'translate3d(' + lastMousePosition.x + 'px, ' + lastMousePosition.y + 'px, 0)'
     });
   }
 
