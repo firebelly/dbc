@@ -187,7 +187,7 @@
   padding-bottom: 111.1111%;
   background-position: center center;
 
-  .y-container {
+  .background-container {
     top: 0;
     left: 50%;
     bottom: 0;
@@ -199,13 +199,22 @@
   }
 
   .y {
-    top: 0;
     left: 50%;
     width: 100%;
+    bottom: beat(6);
     position: absolute;
     padding-bottom: 58.4435%;
     background-color: inherit;
     transform: translateX(-49.95%);
+  }
+
+  .y-stem {
+    top: 0;
+    left: 50%;
+    height: 55%;
+    width: 1.5786729%;
+    position: absolute;
+    transform: translateX(-52%);;
   }
 
   .logo-bottom {
@@ -217,5 +226,14 @@
 
   @include media-md {
     padding-bottom: 56.25%;
+
+    .y {
+      top: 0;
+      bottom: auto;
+    }
+
+    .y-stem {
+      display: none;
+    }
   }
 }
