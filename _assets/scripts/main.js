@@ -52,7 +52,7 @@ function _initInviewElements() {
     var waypoint = $elem.waypoint(function(direction) {
       $elem.attr('data-in-view', direction === 'down');
     },{
-      offset: '65%'
+      offset: '50%'
     });
   }
 
@@ -61,7 +61,7 @@ function _initInviewElements() {
     $container.waypoint(function(direction) {
       $container.attr('data-in-view', direction === 'down');
     },{
-      offset: '65%'
+      offset: '50%'
     });
 
     // establish transition delays

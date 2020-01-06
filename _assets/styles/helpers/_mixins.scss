@@ -20,13 +20,13 @@
     &:first-of-type {
       color: $color1;
       > span {
-        transform: translateY(100%);
+        transform: translate3d(0,100%,0);
       }
     }
     &:last-of-type {
       color: $color2;
       > span {
-        transform: translateY(-100%);
+        transform: translate3d(0,-100%,0);
       }
     }
   }
@@ -34,7 +34,7 @@
   // In-view
   &[data-in-view="true"] {
     > span > span {
-      transform: translateY(0);
+      transform: translate3d(0,0,0);
     }
   }
 }

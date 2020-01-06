@@ -78,6 +78,14 @@
         margin-top: $padding-sm;
       }
     }
+
+    .col-md-1-2 + .col-md-1-2 {
+      margin-top: $padding-sm;
+
+      @include media-md {
+        margin-top: 0;
+      }
+    }
   }
 
   .section-content {
