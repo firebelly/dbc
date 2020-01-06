@@ -1,0 +1,111 @@
+---
+title: Design<br> Impact Grants
+layout: default
+permalink: /design-impact-grants-inactive/
+id: design-impact-grants
+bodyClasses: design-impact-grants
+showGrantees: false
+---
+
+{% contentfor bannerContent %}
+  <h2 class="split-headline animate-in black-teal">
+    {% if page.showGrantees == true %}
+      <span><span>We've Found<br> Our <span class="color-teal">2020</span></span></span>
+      <span><span>Grantees <svg class="icon-diamond" aria-hidden="true" role="presentation"><use xlink:href="#icon-diamond"/></svg></span></span>
+    {% else %}
+      <span><span>Awards Are<br> Announced</span></span>
+      <span><span>Apr 2020 <svg class="icon-diamond-hollow-thick" aria-hidden="true" role="presentation"><use xlink:href="#icon-diamond-hollow-thick"/></svg></span></span>
+    {% endif %}
+  </h2>
+
+  <div class="grid spaced-lg -align-right">
+    <div class="col-md-1-2">
+      <p>At its heart, Designing a Better Chicago honors the work of all those who use design to advance civic good.</p>
+    </div>
+  </div>
+{% endcontentfor %}
+
+<div class="intro-section section background-moss{% if page.showGrantees %} grantees-shown{% endif %}">
+  <div class="section-line"><svg class="fill-white" aria-hidden="true" role="presentation"><use xlink:href="#line" /></svg></div>
+  <div class="container">
+    <div class="section-content grid spaced-lg -align-right">
+      <div class="col-md-1-2">
+        <p>The Design Impact Grant Program offers annual project-specific grants to individuals and organizations using design or design principles to directly address pressing issues in Chicago communities.  Every year, 2-4 grants, up to $25K each, will be awarded based on the quality of applications and available funds.</p>
+        {% if page.showGrantees == false %}
+          <hr>
+          <p>The 2020 nomination period is currently closed. Sign up for our mailing list to be notified when nominations reopen for the 2021 grant program.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if page.showGrantees == false %}
+      <p class="section-cta overlap">
+        <a href="https://designchicago.org/grants/designing-a-better-chicago-guidelines/" target="_blank" rel="noopener" class="diamond-button"><span class="-inner">Full Grant Details <svg class="icon icon-arrow-right" aria-hidden="true" role="presentation"><use xlink:href="#icon-arrow-right"/></svg></span></a>
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+{% if page.showGrantees %}
+  <div id="grantees" class="grantees-section section">
+    <div class="container">
+      <div class="headline-one">
+        <h2 class="split-headline animate-in black-teal">
+          <span><span>The 2020</span></span>
+          <span><span>Artist Grantees <svg class="icon-diamond" aria-hidden="true" role="presentation"><use xlink:href="#icon-diamond"/></svg></span></span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="events-grid-container container">
+      <div class="events-grid masonry-grid">
+        <article class="event grid-item">
+          <header class="event-header">
+            <div class="event-image" style="background-image:url('/assets/images/about-design-team.jpg');"></div>
+            <h2 class="event-title">Lap Chi Kwong & Alison Von Glinow, Elmhurst, IL</h2>
+          </header>
+          <div class="event-body">
+            <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cum doloribus iste voluptas cumque sapiente dolores, id iure dolore sit laborum repellendus odit et vero quaerat quo ullam, doloremque ipsam?</p>
+            <p class="event-cta"><a href="#" target="_blank" rel="noopener" class="button with-icon -orange"><span>Website</span> <svg class="icon-flair-arrow" aria-hidden="true" role="presentation"><use xlink:href="#icon-flair-arrow"/></svg></a></p>
+          </div>
+        </article>
+        <article class="event grid-item">
+          <header class="event-header">
+            <div class="event-image" style="background-image:url('/assets/images/about-design-team.jpg');"></div>
+            <h2 class="event-title">Courtesy Alejandra Celedón & Nicolás Stutzin, Wicker Park</h2>
+          </header>
+          <div class="event-body">
+            <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit totam sapiente, repellat quasi minus. Porro officiis odit maxime, placeat maiores quis, inventore vero repellendus eum aspernatur facere eaque recusandae.</p>
+            <p class="event-cta"><a href="#" target="_blank" rel="noopener" class="button with-icon -orange"><span>Website</span> <svg class="icon-flair-arrow" aria-hidden="true" role="presentation"><use xlink:href="#icon-flair-arrow"/></svg></a></p>
+          </div>
+        </article>
+        <article class="event grid-item">
+          <header class="event-header">
+            <div class="event-image" style="background-image:url('/assets/images/about-design-team.jpg');"></div>
+            <h2 class="event-title">Borderless Studio: Courtesy Paola Aguirre, Chicago, IL</h2>
+          </header>
+          <div class="event-body">
+            <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis dolore porro, odio sunt natus cumque debitis libero, velit quia consequatur praesentium quae in quam excepturi nisi iusto asperiores voluptatem veritatis.</p>
+            <p class="event-cta"><a href="#" target="_blank" rel="noopener" class="button with-icon -orange"><span>Website</span> <svg class="icon-flair-arrow" aria-hidden="true" role="presentation"><use xlink:href="#icon-flair-arrow"/></svg></a></p>
+          </div>
+        </article>
+        <article class="event grid-item">
+          <header class="event-header">
+            <div class="event-image" style="background-image:url('/assets/images/about-design-team.jpg');"></div>
+            <h2 class="event-title">Sweetwater Foundation: Emmanuel Pratt, Chicago, IL</h2>
+          </header>
+          <div class="event-body">
+            <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid recusandae vitae soluta, ab eos rerum, incidunt ipsum debitis, doloremque reprehenderit laboriosam nemo, voluptatem totam quod aspernatur doloribus. Eius culpa, magnam.</p>
+            <p class="event-cta"><a href="#" target="_blank" rel="noopener" class="button with-icon -orange"><span>Website</span> <svg class="icon-flair-arrow" aria-hidden="true" role="presentation"><use xlink:href="#icon-flair-arrow"/></svg></a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="background-section section" style="background-image:url('/assets/images/design-impact-grants-section-background.jpg');">
+  <div class="y-container">
+    <div class="y"><svg class="logo-bottom" aria-hidden="true" role="presentation"><use xlink:href="#logo-bottom"/></svg></div>
+  </div>
+</div>
