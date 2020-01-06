@@ -167,12 +167,12 @@
       transform: translateY(50%);
     }
 
-    > * {
+    > *:not(.container) {
       margin: 0 auto;
     }
 
     @include media-md {
-      > * {
+      > *:not(.container) {
         margin: 0;
       }
     }
