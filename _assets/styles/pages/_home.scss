@@ -225,8 +225,20 @@ body.home {
       @include h2;
     }
 
+    .list {
+      > .col-md-1-2 + .col-md-1-2 {
+        border-top: 2px solid color('dark-gray');
+
+        @include media-md {
+          border-top: 0;
+        }
+      }
+    }
+
     ul {
       padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
       list-style: none;
 
       &:not(.partner-logos) {
@@ -269,7 +281,13 @@ body.home {
     }
 
     @include media-md {
-       padding: $padding-xl 0;
+      padding: $padding-xl 0;
+
+      ul:not(.partner-logos) {
+        li:nth-last-of-type(-n+2) > .-inner {
+          border-bottom: none;
+        }
+      }
     }
   }
 
