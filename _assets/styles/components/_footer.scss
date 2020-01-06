@@ -12,7 +12,7 @@
     padding: $padding-lg 0 beat(2);
 
     > .container > .-top {
-      margin-bottom: $padding-xl;
+      margin-bottom: beat(17);
     }
   }
 
@@ -38,6 +38,7 @@ form.newsletter {
 
   button.submit {
     color: color('orange');
+    margin-bottom: beat(5);
     &:hover {
       color: color('teal');
     }
