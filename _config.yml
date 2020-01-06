@@ -26,6 +26,7 @@ exclude:
   - webpack.mix.js
   - yarn.lock
   - readme.md
+  - fabfile.py
   - shipitfile.js
   - dbc.sublime-project
   - Gemfile

@@ -1,7 +1,7 @@
 from fabric.api import *
 import os
 
-env.hosts = ['dbc.firebelly.co']
+env.hosts = ['firebelly.co']
 env.user = 'firebelly'
 env.path = '~/Sites/dbc'
 env.remotepath = '/home/firebelly/webapps/dbc'
@@ -10,7 +10,6 @@ env.warn_only = True
 env.remote_protocol = 'http'
 
 def deploy():
-  update()
   copy()
 
 def update():
