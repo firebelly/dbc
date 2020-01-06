@@ -89,8 +89,8 @@
     }
 
     .event-title {
+      @include p1;
       margin: 0;
-      @include h3;
     }
 
     .event-body {
@@ -105,7 +105,7 @@
     }
 
     .event-description {
-      @include h3;
+      @include p1;
       margin: 0;
     }
 
