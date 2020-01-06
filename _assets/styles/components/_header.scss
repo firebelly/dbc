@@ -19,12 +19,18 @@
 
     a {
       display: inline-block;
+      &:hover {
+        svg {
+          fill: color('white');
+        }
+      }
     }
 
     svg {
       width: 230px;
       height: 167px;
       vertical-align: top;
+      transition: fill .2s ease-out;
     }
   }
 
@@ -146,6 +152,13 @@
     padding: beat(5) 0 0 269px;
     background-color: transparent;
 
+    a {
+      transition: color .2s ease-out, padding .2s ease-out;
+      &:hover {
+        color: color('white');
+      }
+    }
+
     ul {
       li {
         display: inline-block;
@@ -156,9 +169,11 @@
 
         a {
           @include button(p2);
+          padding-bottom: 5px;
           color: color('black');
           &:hover {
-            color: color('black');
+            padding-bottom: 8px;
+            color: color('white');
           }
         }
 
