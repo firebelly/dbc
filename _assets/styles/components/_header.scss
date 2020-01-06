@@ -54,8 +54,9 @@
 }
 
 .nav-open {
-  top: 32px;
-  right: 25px;
+  top: 22px;
+  right: 20px;
+  padding: 10px 5px;
   svg {
     width: 50px;
     height: 18px;
@@ -63,8 +64,9 @@
 }
 
 .nav-close {
-  right: 32px;
-  top: beat(2);
+  top: 15px;
+  right: 25px;
+  padding: 5px;
   svg {
     width: 40px;
     height: 40px;
