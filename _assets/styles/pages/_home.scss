@@ -254,7 +254,7 @@ body.home {
 
           > .-inner {
             display: block;
-            padding-top: beat(2);
+            padding-top: $beat;
             padding-bottom: $beat;
             border-bottom: 2px solid color('dark-gray');
 
@@ -284,6 +284,10 @@ body.home {
       padding: $padding-xl 0;
 
       ul:not(.partner-logos) {
+        li > .-inner {
+          padding-top: beat(2);
+        }
+
         li:nth-last-of-type(-n+2) > .-inner {
           border-bottom: none;
         }
