@@ -36,7 +36,7 @@
         width: 100%;
         content: '';
         height: 2px;
-        bottom: 0px;
+        bottom: -4px;
         position: absolute;
         border-bottom: 2px solid;
       }
@@ -46,6 +46,14 @@
       width: 80px;
       height: 26px;
       vertical-align: middle;
+    }
+
+    @include media-md {
+      span {
+        &::after {
+          bottom: 0;
+        }
+      }
     }
   }
 }

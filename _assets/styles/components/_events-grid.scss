@@ -1,11 +1,11 @@
 // Events Grid
 .events-grid-container {
-  padding-top: 3px;
+  padding-top: 2px;
   overflow-x: hidden;
   position: relative;
   &::before,
   &::after {
-    top: -3px;
+    top: -2px;
     bottom: 0;
     z-index: 1;
     content: '';
@@ -14,34 +14,46 @@
     background: color('white');
   }
   &::before {
-    left: -3px;
+    left: -2px;
   }
   &::after {
-    right: -3px;
+    right: -2px;
   }
 
   @include media-md {
+    padding-top: 3px;
     &::before,
     &::after {
+      top: -3px;
       width: $padding-md + 3px;
+    }
+    &::before {
+      left: -3px;
+    }
+    &::after {
+      right: -3px;
     }
   }
 }
 
 .events-grid {
+  border-bottom: 2px solid color('black');
+
   @include media-md {
+    border-bottom: 0;
     margin-left: -$padding-md;
     width: calc(100% + #{$padding-md * 2});
   }
 
   .grid-item {
     width: 100%;
-    margin-top: -3px;
+    margin-top: -2px;
+    padding: 20px 0 beat(6);
     background: color('white');
-    padding: 20px 0 $padding-sm;
-    border-top: 3px solid color('black');
+    border-top: 2px solid color('black');
 
     @include media-md {
+      margin-top: -3px;
       margin-left: -3px;
       width: calc(50% + 3px);
       border: 3px solid color('black');
@@ -96,7 +108,11 @@
     .event-body {
       margin-top: beat(4);
       padding-top: beat(4);
-      border-top: 3px solid color('black');
+      border-top: 2px solid color('black');
+
+      @include media-md {
+        border-top-width: 3px;
+      }
     }
 
     .event-location {
