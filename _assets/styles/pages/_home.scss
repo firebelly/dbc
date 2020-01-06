@@ -217,7 +217,7 @@ body.home {
     > .container > div + div {
       margin-top: $padding-xl;
       @include media-md {
-        margin-top: $padding-xl * 1.5;
+        margin-top: $padding-xl;
       }
     }
 
