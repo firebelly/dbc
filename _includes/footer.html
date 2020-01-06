@@ -26,11 +26,11 @@
     </div>
 
     <div class="-bottom grid spaced-lg">
-      <div class="col-md-1-2">
-        <p class="copyright">Copyright © {{ site.title }} {{ "now" | date: "%Y"}}</p>
-      </div>
-      <div class="col-md-1-2">
+      <div class="col-md-1-2 md-order-1">
         {% include footernav.html %}
+      </div>
+      <div class="col-md-1-2 md-order-0">
+        <p class="copyright">Copyright © {{ site.title }} {{ "now" | date: "%Y"}}</p>
       </div>
     </div>
 

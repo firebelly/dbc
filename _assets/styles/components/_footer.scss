@@ -51,14 +51,19 @@ form.newsletter {
     @extend .semantic-list;
 
     > div {
-      display: flex;
-      justify-content: space-between;
-
       &.-bottom {
         margin-top: beat(4);
         padding-top: beat(2);
         border-top: 1px solid color('black');
       }
+    }
+
+    li {
+      padding-right: $beat;
+    }
+
+    li + li {
+      margin-top: beat(2);
     }
 
     a {
@@ -74,6 +79,17 @@ form.newsletter {
           color: color('teal');
           text-decoration: underline;
         }
+      }
+    }
+
+    @include media-md {
+      > div {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li + li {
+        margin-top: 0;
       }
     }
   }
