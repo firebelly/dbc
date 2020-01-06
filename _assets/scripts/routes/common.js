@@ -43,6 +43,7 @@ export default {
     _initSiteNav();
     _initMasonry();
     _initLoadMore();
+    _initFormFunctions();
 
     // Esc handlers
     $(document).keyup(function(e) {
@@ -172,6 +173,14 @@ export default {
             }
           });
         }
+      });
+    }
+
+    function _initFormFunctions() {
+      $('form input').on('focus', function() {
+        $(this).closest('.input-wrap').addClass('-focus');
+      }).on('blur', function() {
+        $(this).closest('.input-wrap').removeClass('-focus');
       });
     }
 

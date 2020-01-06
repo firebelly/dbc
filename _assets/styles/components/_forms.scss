@@ -35,6 +35,12 @@ form {
       position: absolute;
       background-color: color('black');
     }
+
+    &.-focus {
+      label {
+        color: color('dark-gray');
+      }
+    }
   }
 
   input {
@@ -70,6 +76,7 @@ form {
     width: 100%;
     display: block;
     margin-bottom: $beat;
+    transition: color .2s ease-out;
   }
 
   .form-actions {
