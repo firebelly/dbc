@@ -9,7 +9,6 @@
   }
   padding: 0;
   border: none;
-  cursor: pointer;
   appearance: none;
   background: none;
   position: relative;
@@ -53,7 +52,6 @@
 @mixin big-buttons() {
   @include p2;
   display: flex;
-  cursor: pointer;
   align-items: center;
   border: 1px solid transparent;
   transition: background-color .2s ease-out, color .2s ease-out, border .2s ease-out;

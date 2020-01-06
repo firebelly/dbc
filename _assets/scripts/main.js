@@ -32,6 +32,22 @@ const routes = new Router({
 var $body = $('body'),
     $customCursor;
 
+function _isTouchDevice() {
+  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+  var mq = function(query) {
+      return window.matchMedia(query).matches;
+  }
+
+  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+      return true;
+  }
+
+  // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+  // https://git.io/vznFH
+  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+  return mq(query);
+}
+
 function _initInviewElements() {
   $('.animate-in').each(function() {
     var $elem = $(this);
@@ -76,6 +92,11 @@ function _initInviewElements() {
 _initInviewElements();
 
 function _initCustomCursor() {
+  if (_isTouchDevice()) {
+    return;
+  }
+
+  $body.addClass('custom-cursor');
   $body.css('cursor', 'none');
   var lastMousePosition = { x: 0, y: 0 };
 

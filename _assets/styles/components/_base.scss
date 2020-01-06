@@ -13,6 +13,18 @@ body {
   font-size: 16px;
   color: color(black);
 	background: color(white);
+
+  // Custom-cursor styles
+  &.custom-cursor {
+    a,
+    button,
+    .button {
+      &,
+      &:hover {
+        cursor: none;
+      }
+    }
+  }
 }
 
 a {
