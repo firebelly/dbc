@@ -54,6 +54,12 @@
   }
 
   .event {
+    a {
+      &:hover {
+        color: color('teal');
+      }
+    }
+
     .event-meta {
       p {
         margin: 0;

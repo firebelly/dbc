@@ -155,6 +155,9 @@
         a {
           @include button(p2);
           color: color('black');
+          &:hover {
+            color: color('black');
+          }
         }
 
         svg {

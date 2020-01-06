@@ -7,8 +7,19 @@ form {
     }
 
     &.grid {
-      flex-wrap: nowrap;
       justify-content: space-between;
+
+      > * + * {
+        margin-top: $padding-sm;
+      }
+
+      @include media-md {
+        flex-wrap: nowrap;
+
+        > * + * {
+          margin-top: 0;
+        }
+      }
     }
   }
 

@@ -20,6 +20,11 @@
   &:hover,
   &:focus {
     outline: none;
+    color: color('teal');
+
+    svg {
+      fill: color('teal');
+    }
   }
 
   // With Icon

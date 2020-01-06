@@ -99,6 +99,12 @@
       }
     }
 
+    a {
+      &:hover {
+        color: color('teal');
+      }
+    }
+
     .col-md-1-2 + .col-md-1-2 {
       margin-top: $padding-sm;
 
