@@ -72,6 +72,10 @@
   @include media-md {
     padding-top: beat(30);
 
+    > .container {
+      min-height: 40vw;
+    }
+
     .banner-background {
       .y {
         top: beat(21);
