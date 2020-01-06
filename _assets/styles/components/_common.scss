@@ -4,30 +4,50 @@
 .split-headline {
   @include h1;
   @include split-headline;
+  line-height: 1;
+
+  @include media-md {
+    line-height: 1;
+  }
 
   &.offset-top-1 {
-    margin-bottom: beat(-6);
-    transform: translateY(beat(-6));
+    margin-bottom: -62px;
+    transform: translateY(-62px);
 
-    span + span {
-      margin-top: beat(2);
+    > span {
+      &:first-of-type > span {
+        padding-bottom: $beat;
+      }
+      &:last-of-type > span {
+        padding-top: $beat;
+      }
     }
 
     @include media-md {
-      margin-bottom: beat(-13.5);
-      transform: translateY(beat(-13.5));
+      margin-bottom: beat(-14);
+      transform: translateY(beat(-14));
 
-      span + span {
-        margin-top: $beat;
+      > span {
+        &:first-of-type > span {
+          padding-bottom: 0;
+        }
+        &:last-of-type > span {
+          padding-top: $beat;
+        }
       }
     }
 
     @include media-lg {
-      margin-bottom: beat(-16.5);
-      transform: translateY(beat(-16.5));
+      margin-bottom: beat(-17);
+      transform: translateY(beat(-17));
 
-      span + span {
-        margin-top: beat(5);
+      > span {
+        &:first-of-type > span {
+          padding-bottom: $beat;
+        }
+        &:last-of-type > span {
+          padding-top: 22px;
+        }
       }
     }
   }

@@ -25,9 +25,6 @@ body.home {
 
     .banner-background {
       background-color: color('orange');
-      .y {
-        top: beat(6);
-      }
 
       svg {
         fill: color('gray');
@@ -67,7 +64,7 @@ body.home {
       }
 
       .site-logo {
-        width: 45vw;
+        max-width: 790px;
         margin-left: beat(-2);
       }
     }

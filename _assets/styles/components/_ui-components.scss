@@ -50,19 +50,36 @@
 }
 
 // Big Shape Buttons
+@mixin big-buttons() {
+  @include p2;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: background-color .2s ease-out, color .2s ease-out, border .2s ease-out;
+
+  &:hover,
+  &:focus {
+    color: color('black');
+    border-color: color('gray');
+    background-color: color('white');
+
+    svg {
+      fill: color('black');
+    }
+  }
+}
+
 .circle-button {
   @extend .button-reset;
-  @include p2;
+  @include big-buttons;
   width: 220px;
   height: 220px;
-  display: flex;
   padding: 24px;
-  cursor: pointer;
   text-align: left;
   border-radius: 50%;
-  align-items: center;
   color: color('black');
-  background: color('orange');
+  background-color: color('orange');
 
   svg {
     width: 40px;
@@ -84,13 +101,10 @@
 }
 
 .square-button {
-  @include p2;
+  @include big-buttons;
   width: 198px;
   height: 198px;
-  display: flex;
-  cursor: pointer;
   text-align: left;
-  align-items: center;
   text-decoration: none;
   color: color('black');
   background-color: color('electric');
@@ -116,12 +130,9 @@
 }
 
 .diamond-button {
-  @include p2;
+  @include big-buttons;
   width: 156px;
   height: 156px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
   color: color('gray');
   text-decoration: none;
   transform: rotate(45deg);
