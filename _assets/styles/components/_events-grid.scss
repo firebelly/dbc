@@ -1,5 +1,6 @@
 // Events Grid
 .events-grid-container {
+  overflow: hidden;
   position: relative;
   &::before,
   &::after {
