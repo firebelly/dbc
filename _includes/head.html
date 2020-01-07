@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="og:url" content="https://designingabetterchicago.org/">
-  <meta name="og:title" content="{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="og:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.png">
+  <meta property="og:url" content="https://designingabetterchicago.org/">
+  <meta property="og:title" content="{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.png">
 
   <!-- Google Analytics -->
   <script>
