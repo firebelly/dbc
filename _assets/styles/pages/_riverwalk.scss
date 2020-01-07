@@ -67,6 +67,10 @@ body.riverwalk {
     }
 
     .map {
+      img {
+        width: 100%;
+        max-width: none;
+      }
       margin: $padding-xl 0 $padding-sm;
     }
 
