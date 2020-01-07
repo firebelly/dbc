@@ -104,7 +104,15 @@ export default {
 
     function _initMasonry() {
       $('.masonry-grid').masonry({
-        itemSelector: '.grid-item'
+        itemSelector: '.grid-item',
+        hiddenStyle: {
+          transform: 'translateY(100px)',
+          opacity: 0
+        },
+        visibleStyle: {
+          transform: 'translateY(0px)',
+          opacity: 1
+        }
       });
     }
 
@@ -114,7 +122,15 @@ export default {
       $loadMoreSections.each(function() {
         var $container = $(this).find('.load-more-container');
         var $grid = $container.masonry({
-          itemSelector: '.grid-item'
+          itemSelector: '.grid-item',
+          hiddenStyle: {
+            transform: 'translateY(100px)',
+            opacity: 0
+          },
+          visibleStyle: {
+            transform: 'translateY(0px)',
+            opacity: 1
+          }
         });
 
         var $queue = $(this).find('.load-more-queue');
