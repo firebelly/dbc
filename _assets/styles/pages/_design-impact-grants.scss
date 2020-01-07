@@ -2,6 +2,7 @@
 
 body.design-impact-grants {
   @include selection(teal,cream);
+  background-color: color('cream');
 
   // Active Nav Style
   .site-nav .nav-design-impact-grants a {

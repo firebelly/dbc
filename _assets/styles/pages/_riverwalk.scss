@@ -2,6 +2,7 @@
 
 body.riverwalk {
   @include selection(electric,forest);
+  background-color: color('forest');
 
   // Active Nav Style
   .site-nav .nav-riverwalk a {

@@ -2,6 +2,7 @@
 
 body.home {
   @include selection(black,orange);
+  background-color: color('orange');
 
   // Active nav styles
   .site-nav .nav-home a {
@@ -32,10 +33,11 @@ body.home {
     }
 
     .site-logo {
+      margin: 0;
       z-index: 1;
       width: 100%;
+      max-width: 270px;
       position: relative;
-      margin: 0 0 0 -#{$padding-sm / 2};
       .logo-container {
         width: 100%;
         position: relative;
@@ -65,8 +67,14 @@ body.home {
       }
 
       .site-logo {
-        max-width: 790px;
+        max-width: 690px;
         margin-left: beat(-2);
+      }
+    }
+
+    @include media-lg {
+      .site-logo {
+        max-width: 790px;
       }
     }
   }

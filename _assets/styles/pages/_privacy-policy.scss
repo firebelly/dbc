@@ -2,6 +2,7 @@
 
 body.privacy-policy {
   @include selection(black,gray);
+  background-color: color('gray');
 
   // Active Nav Style
   .footer-nav .nav-privacy-policy a {
