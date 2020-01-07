@@ -52,8 +52,17 @@ body.riverwalk {
     padding-bottom: $padding-sm;
 
     .headline-one {
+      h2 {
+        text-align: left;
+      }
       p {
         @include p1;
+        text-align: left;
+      }
+      @include media-md {
+        .align-right {
+          text-align: right;
+        }
       }
     }
 
