@@ -53,6 +53,24 @@
   }
 }
 
+// Single Animated Headline
+.section-headline.animate-in {
+  overflow: hidden;
+
+  > span {
+    display: block;
+    transform: translate3d(0,100%,0);
+    transition: transform .5s ease-out;
+  }
+
+  // In-view
+  &[data-in-view="true"] {
+    > span {
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+
 // Common Section Styles
 .section {
   position: relative;
