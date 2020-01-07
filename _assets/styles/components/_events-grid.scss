@@ -95,8 +95,10 @@
     .event-image {
       height: 0;
       margin: beat(2) 0;
+      filter: grayscale(1);
       background-size: cover;
       padding-bottom: 57.1428%;
+      background-repeat: no-repeat;
       background-position: center center;
 
       @include media-md {
