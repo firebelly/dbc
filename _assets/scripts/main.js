@@ -8,6 +8,7 @@ import Waypoint from 'waypoints/lib/jquery.waypoints.js';
 
 // import local dependencies
 import Router from './util/Router';
+import Breakpoints from './util/Breakpoints';
 import common from './routes/common';
 
 const swup = new Swup({
@@ -21,7 +22,8 @@ const swup = new Swup({
   linkSelector:
     'a[href^="' +
     window.location.origin +
-    '"]:not([href*="wp-admin"]):not([data-no-swup]), a[href^="/"]:not([href*="wp-admin"]):not([data-no-swup]), a[href^="#"]:not([href*="wp-admin"]):not([data-no-swup])'
+    '"]:not([href*="wp-admin"]):not([data-no-swup]), a[href^="/"]:not([href*="wp-admin"]):not([data-no-swup]), a[href^="#"]:not([href*="wp-admin"]):not([data-no-swup])',
+  containers: ["#swup", "#swup-banner"]
 });
 
 /** Populate Router instance with DOM routes */
@@ -30,6 +32,7 @@ const routes = new Router({
 });
 
 var $body = $('body'),
+    $siteNav = $('#site-nav'),
     $customCursor;
 
 function _isTouchDevice() {
@@ -46,6 +49,46 @@ function _isTouchDevice() {
   // https://git.io/vznFH
   var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
   return mq(query);
+}
+
+// Esc handlers
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) {
+    _hideNav();
+  }
+});
+
+function _initSiteNav() {
+  $(document).on('click', '.nav-open', function() {
+    if (!$body.is('.mobile-nav-open')) {
+      _showNav();
+    }
+  });
+
+  $('.nav-close').on('click', _hideNav);
+}
+_initSiteNav();
+
+function _showNav() {
+  $body.addClass('mobile-nav-open');
+  $siteNav.velocity(
+    { opacity: 1 }, {
+    display: "flex",
+    complete: function() {
+      $siteNav.addClass('-active');
+    }
+  });
+}
+
+function _hideNav() {
+  $body.removeClass('mobile-nav-open');
+  $siteNav.velocity(
+    { opacity: 0 }, {
+    display: "none",
+    complete: function() {
+      $siteNav.removeClass('-active');
+    }
+  });
 }
 
 function _initInviewElements() {
@@ -143,7 +186,9 @@ $(document).ready(() => routes.loadEvents());
 // Reload events when swup replaces content
 swup.on('contentReplaced', function() {
   routes.loadEvents();
-  $('#nav-toggle.-active').removeClass('-active');
+  if (!Breakpoints.nav) {
+    _hideNav();
+  }
 });
 swup.on('animationInDone', function() {
   _initInviewElements();

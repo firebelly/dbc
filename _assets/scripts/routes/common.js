@@ -4,20 +4,14 @@ import Masonry from 'masonry-layout';
 
 // Shared vars among modules
 import appState from '../util/appState';
+import Breakpoints from '../util/Breakpoints';
 
 export default {
   init() {
     // Set up libraries to be used with jQuery
     jQueryBridget( 'masonry', Masonry, $ );
 
-    var breakpointIndicatorString,
-        breakpoint_xl,
-        breakpoint_lg,
-        breakpoint_nav,
-        breakpoint_md,
-        breakpoint_sm,
-        breakpoint_xs,
-        resizeTimer,
+    var resizeTimer,
         slideEasing = [0.65, 0, 0.35, 1],
         $document,
         $body,
@@ -40,17 +34,9 @@ export default {
     transitionElements = [];
 
     // Init functions
-    _initSiteNav();
     _initMasonry();
     _initLoadMore();
     _initFormFunctions();
-
-    // Esc handlers
-    $(document).keyup(function(e) {
-      if (e.keyCode === 27) {
-        _hideNav();
-      }
-    });
 
     // Smoothscroll links
     $('a.smoothscroll').click(function(e) {
@@ -112,32 +98,6 @@ export default {
           if(typeof callback !== 'undefined') {
             callback();
           }
-        }
-      });
-    }
-
-    function _initSiteNav() {
-      $('.nav-open').on('click', _showNav);
-
-      $('.nav-close').on('click', _hideNav);
-    }
-
-    function _showNav() {
-      $siteNav.velocity(
-        { opacity: 1 }, {
-        display: "flex",
-        complete: function() {
-          $siteNav.addClass('-active');
-        }
-      });
-    }
-
-    function _hideNav() {
-      $siteNav.velocity(
-        { opacity: 0 }, {
-        display: "none",
-        complete: function() {
-          $siteNav.removeClass('-active');
         }
       });
     }
@@ -209,22 +169,8 @@ export default {
 
     // Called in quick succession as window is resized
     function _resize() {
-      // Check breakpoint indicator in DOM ( :after { content } is controlled by CSS media queries )
-      breakpointIndicatorString = window.getComputedStyle(
-        document.querySelector('#breakpoint-indicator'), ':after'
-      ).getPropertyValue('content')
-      .replace(/['"]+/g, '');
-
-      // Determine current breakpoint
-      breakpoint_xl = breakpointIndicatorString === 'xl';
-      breakpoint_nav = breakpointIndicatorString === 'lg' || breakpoint_xl;
-      breakpoint_lg = breakpointIndicatorString === 'nav' || breakpoint_lg;
-      breakpoint_md = breakpointIndicatorString === 'md' || breakpoint_nav;
-      breakpoint_sm = breakpointIndicatorString === 'sm' || breakpoint_md;
-      breakpoint_xs = breakpointIndicatorString === 'xs' || breakpoint_sm;
-
       // Reset inline styles for navigation for medium breakpoint
-      if (breakpoint_nav) {
+      if (Breakpoints.nav) {
         $('.site-nav').attr('style', '');
       }
 

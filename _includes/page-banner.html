@@ -1,0 +1,27 @@
+<div class="page-banner">
+  <div class="banner-background">
+    <div class="y">
+      <svg class="logo-top" aria-hidden="true" role="presentation"><use xlink:href="#logo-top"/></svg>
+    </div>
+    <svg class="y-stem" aria-hidden="true" role="presentation"><use xlink:href="#line" /></svg>
+  </div>
+
+  <div id="swup-banner" class="container transition-fade">
+    {% if page.id == 'home' %}
+      <h1 class="site-logo">
+        <span class="visuallyhidden">{{ site.title }}</span>
+        <div class="logo-container">
+          <svg aria-hidden="true" role="presentation"><use xlink:href="#logo-home"/></svg>
+        </div>
+      </h1>
+    {% else %}
+      <h1 class="page-title">{{ page.title }}</h1>
+    {% endif %}
+
+    {% ifhascontent bannerContent %}
+      <div class="banner-content">
+        {% contentblock bannerContent %}
+      </div>
+    {% endifhascontent %}
+  </div>
+</div>

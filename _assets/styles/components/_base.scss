@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   color: color(black);
 	background-color: color(white);
-  transition: background-color .5s ease-out;
+  transition: background-color 1s ease-out;
 
   // Custom-cursor styles
   &.custom-cursor {
@@ -51,8 +51,8 @@ img {
 
 // Page Transitions
 .transition-fade {
-  transition: 0.4s;
   opacity: 1;
+  transition: opacity 0.5s ease-out;
 }
 html.is-animating .transition-fade {
   opacity: 0;

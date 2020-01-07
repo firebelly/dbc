@@ -30,6 +30,10 @@
     max-width: $sitewrapper;
     transform: translateX(-50%);
 
+    svg {
+      transition: fill .5s ease-out;
+    }
+
     .y {
       left: 50%;
       z-index: 1;

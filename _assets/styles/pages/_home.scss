@@ -16,6 +16,13 @@ body.home {
     color: color('orange');
   }
 
+  .site-header {
+    .site-logo {
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+  }
+
   .page-banner {
     padding-top: beat(14);
     background-color: color('orange');
