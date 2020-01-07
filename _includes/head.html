@@ -7,7 +7,7 @@
   <title>{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="og:url" content="{{ site.baseurl }}">
   <meta name="og:title" content="{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}">
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="og:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.png">
 
   <!-- Google Analytics -->

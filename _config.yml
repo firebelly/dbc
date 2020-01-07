@@ -1,9 +1,8 @@
 title: Designing a Better Chicago
 email: info@designingabetterchicago.org
 description: >-
-  Write an awesome description for your new site here. You can edit this line in
-  _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+  Designing a Better Chicago is an annual celebration of design and social
+  impact, launching at NeoCon 2020.
 url: 'http://dbc.jekyll'
 source: .
 destination: ./_site
