@@ -1,5 +1,10 @@
 // Page Banner
 
+html.is-changing {
+  .page-banner {
+    overflow: visible;
+  }
+}
 .page-banner {
   z-index: 1;
   overflow: hidden;
@@ -43,7 +48,6 @@
       top: beat(6);
       position: absolute;
       padding-bottom: 58.4435%;
-      background-color: inherit;
       transform: translateX(-50%);
     }
 
@@ -55,12 +59,11 @@
 
     .y-stem {
       left: 50%;
-      bottom: 0;
-      height: 100%;
-      top: beat(21);
+      height: 2000px;
+      top: 86%;
       width: 1.5786729%;
       position: absolute;
-      transform: translateX(-52%);
+      transform: translateX(-50%);
     }
   }
 
