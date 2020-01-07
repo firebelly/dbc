@@ -6,10 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+  <!-- Facebook/og meta -->
+  <meta property="fb:profile_id" content="93338031080" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_us" />
   <meta property="og:url" content="http://designingabetterchicago.org/" />
   <meta property="og:title" content="{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.png" />
+  <meta property="og:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@NeoCon_Shows" />
+  <meta name="twitter:creator" content="@NeoCon_Shows" />
+  <meta name="twitter:title" content="{% if page.id != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="{{ site.baseurl }}assets/images/DBC-SocialFacebook-BannerAnnounce.jpg" />
 
   <!-- Google Analytics -->
   <script>
