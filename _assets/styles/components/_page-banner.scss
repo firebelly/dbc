@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   padding-top: beat(23);
+  transition: background-color .5s ease-out;
 
   > .container {
     z-index: 1;
@@ -29,6 +30,7 @@
     pointer-events: none;
     max-width: $sitewrapper;
     transform: translateX(-50%);
+    transition: background-color .5s ease-out;
 
     svg {
       transition: fill .5s ease-out;

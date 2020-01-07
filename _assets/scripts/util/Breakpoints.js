@@ -15,8 +15,9 @@ function updateBreakpoints() {
   Breakpoints['sm'] = breakpointIndicatorString === 'sm' || Breakpoints['md'];
   Breakpoints['xs'] = breakpointIndicatorString === 'xs' || Breakpoints['sm'];
 }
+// Update on page load
 updateBreakpoints();
-
+// Update on window.resize
 window.onresize = updateBreakpoints;
-console.log(Breakpoints);
+
 export default Breakpoints
