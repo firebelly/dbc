@@ -97,7 +97,7 @@ body.riverwalk {
       }
 
       .headline-one {
-        margin: 0 0 $padding-md;
+        margin-bottom: $padding-md;
       }
 
       .installation-text {
@@ -114,8 +114,16 @@ body.riverwalk {
   .design-team-section {
     padding: $padding-md 0;
 
+    .headline-one {
+      margin: 0 0 $padding-sm;
+    }
+
     @include media-md {
       padding: $padding-xl 0;
+
+      .headline-one {
+        margin-bottom: $padding-md;
+      }
     }
   }
 
