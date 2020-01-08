@@ -24,8 +24,23 @@
   }
 
   .newsletter-signup {
+    h4 {
+      margin-top: 0;
+    }
     h4, p {
       @include p2;
+    }
+  }
+
+  .contact-info {
+    > div {
+      p:first-of-type {
+        margin-top: 0;
+      }
+
+      + div {
+        margin-top: beat(4);
+      }
     }
   }
 }
