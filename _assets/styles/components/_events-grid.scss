@@ -47,15 +47,16 @@
 
   .grid-item {
     width: 100%;
-    margin-top: -2px;
+    // margin-top: -2px;
     padding: 20px 0 beat(6);
     background: color('white');
     border-top: 2px solid color('black');
 
     @include media-md {
-      margin-top: -3px;
-      margin-left: -3px;
-      width: calc(50% + 3px);
+      // margin-top: -3px;
+      // margin-left: -3px;
+      // width: calc(50% + 3px);
+      width: 50%;
       border: 3px solid color('black');
       padding: 20px $padding-md $padding-md;
 
