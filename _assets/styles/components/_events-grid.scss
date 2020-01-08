@@ -42,7 +42,7 @@
   @include media-md {
     border-bottom: 0;
     margin-left: -$padding-md;
-    width: calc(100% + #{$padding-md * 2});
+    width: calc(100% + #{($padding-md * 2) + 9px});
   }
 
   .grid-item {
@@ -53,10 +53,9 @@
     border-top: 2px solid color('black');
 
     @include media-md {
-      // margin-top: -3px;
-      // margin-left: -3px;
-      // width: calc(50% + 3px);
       width: 50%;
+      margin-top: -3px;
+      margin-left: -3px;
       border: 3px solid color('black');
       padding: 20px $padding-md $padding-md;
 

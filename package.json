@@ -35,6 +35,7 @@
     "@swup/body-class-plugin": "^1.0.1",
     "@swup/debug-plugin": "^1.0.3",
     "@swup/scroll-plugin": "^1.0.6",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.4.1",
     "jquery-bridget": "^2.0.1",
     "masonry-layout": "^4.2.2",
