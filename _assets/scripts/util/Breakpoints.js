@@ -18,6 +18,6 @@ function updateBreakpoints() {
 // Update on page load
 updateBreakpoints();
 // Update on window.resize
-window.onresize = updateBreakpoints;
+window.addEventListener('resize', updateBreakpoints);
 
 export default Breakpoints
