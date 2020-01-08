@@ -4,6 +4,7 @@ description: >-
   Designing a Better Chicago is an annual celebration of design and social
   impact, launching at NeoCon 2020.
 url: 'http://dbc.jekyll'
+gaTrackingId: UA-XXXXX-Y
 source: .
 destination: ./_site
 collections_dir: .
