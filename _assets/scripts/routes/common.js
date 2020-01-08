@@ -1,6 +1,7 @@
 import jQueryBridget from 'jquery-bridget';
 import Velocity from 'velocity-animate';
 import Masonry from 'masonry-layout';
+import ImagesLoaded from 'imagesloaded';
 
 // Shared vars among modules
 import appState from '../util/appState';
@@ -10,6 +11,7 @@ export default {
   init() {
     // Set up libraries to be used with jQuery
     jQueryBridget( 'masonry', Masonry, $ );
+    ImagesLoaded.makeJQueryPlugin( $ );
 
     var resizeTimer,
         slideEasing = [0.65, 0, 0.35, 1],
@@ -131,6 +133,10 @@ export default {
             transform: 'translateY(0px)',
             opacity: 1
           }
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded({ background: '.event-image' }).progress( function() {
+          $grid.masonry();
         });
 
         var $queue = $(this).find('.load-more-queue');
