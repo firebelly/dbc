@@ -20,7 +20,7 @@
     &[class*='#{$color}-'] {
       > span:first-of-type {
         color: $value;
-        svg {
+        svg:not([class*=fill-]) {
           fill: $value;
         }
       }
