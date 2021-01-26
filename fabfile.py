@@ -17,4 +17,4 @@ def update():
     run('git pull origin {0}'.format(env.git_branch))
 
 def copy():
-  put('_site', '/home/firebelly/apps/dbc/')
+  put('_site/*', '/home/firebelly/apps/dbc/')
